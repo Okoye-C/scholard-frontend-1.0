@@ -1,0 +1,94 @@
+$themeColourOne: rgb(154, 150, 199);
+$themeColourTwo: rgb(27, 27, 75);
+.WelcomePage{
+    display: flex;
+    // background-color: red;
+    height: 100vh;
+}
+
+.Sidebar{
+    flex-grow: 2;
+    background-color: $themeColourOne;
+}
+
+.welcome-page-main-section{
+    flex-grow: 5;
+    background-color: $themeColourTwo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $themeColourOne;
+    gap: 1rem;
+    h1.scholard-logo-large{
+        padding: 0;
+        margin: 0;
+        font-size: 3rem;
+        color: white;
+    }
+    h2.welcome-text-large{
+        font-size: 2.5rem;
+        padding: 0;
+        margin: 0;
+    }
+    p.info-text{
+        padding: 0;
+        margin: 0;
+        width: 20rem;
+        text-align: center;
+        margin-top: -0.7rem;
+    }
+    p.learnmore-link{
+        font-size: 1.2rem;
+        color: white;
+    }
+}
+
+.MessageTile{
+    position: absolute;
+    bottom: 3rem;
+    width: 60%;
+    form.messsage-tile-form{
+        background-color: $themeColourOne;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 1.5rem;
+        input.message-tile-inp{
+            flex-grow: 1;
+            background-color: transparent;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            font-size: 1.3rem;
+            padding: 0.3rem;
+            color: black;
+        }
+        button.attach-file-btn{
+            background-color: transparent;
+            border: none;
+            color: $themeColourTwo;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            font-size: 1.8rem;
+            border-radius: 3rem;
+        }
+        button.submit-btn{
+            background-color: $themeColourTwo;
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            font-size: 1.8rem;
+            border-radius: 3rem;
+            svg{
+                transform: translateX(2px);
+            }
+        }
+    }
+}

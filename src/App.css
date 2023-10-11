@@ -1,1 +1,91 @@
-/*# sourceMappingURL=App.css.map */
+.WelcomePage {
+  display: flex;
+  height: 100vh;
+}
+
+.Sidebar {
+  flex-grow: 2;
+  background-color: rgb(154, 150, 199);
+}
+
+.welcome-page-main-section {
+  flex-grow: 5;
+  background-color: rgb(27, 27, 75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(154, 150, 199);
+  gap: 1rem;
+}
+.welcome-page-main-section h1.scholard-logo-large {
+  padding: 0;
+  margin: 0;
+  font-size: 3rem;
+  color: white;
+}
+.welcome-page-main-section h2.welcome-text-large {
+  font-size: 2.5rem;
+  padding: 0;
+  margin: 0;
+}
+.welcome-page-main-section p.info-text {
+  padding: 0;
+  margin: 0;
+  width: 20rem;
+  text-align: center;
+  margin-top: -0.7rem;
+}
+.welcome-page-main-section p.learnmore-link {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.MessageTile {
+  position: absolute;
+  bottom: 3rem;
+  width: 60%;
+}
+.MessageTile form.messsage-tile-form {
+  background-color: rgb(154, 150, 199);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 1.5rem;
+}
+.MessageTile form.messsage-tile-form input.message-tile-inp {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 1.3rem;
+  padding: 0.3rem;
+  color: black;
+}
+.MessageTile form.messsage-tile-form button.attach-file-btn {
+  background-color: transparent;
+  border: none;
+  color: rgb(27, 27, 75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  border-radius: 3rem;
+}
+.MessageTile form.messsage-tile-form button.submit-btn {
+  background-color: rgb(27, 27, 75);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  border-radius: 3rem;
+}
+.MessageTile form.messsage-tile-form button.submit-btn svg {
+  transform: translateX(2px);
+}/*# sourceMappingURL=App.css.map */
