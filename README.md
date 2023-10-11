@@ -1,1 +1,0 @@
-# scholard-frontend-1.0
