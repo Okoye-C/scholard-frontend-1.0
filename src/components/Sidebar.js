@@ -28,7 +28,7 @@ const Sidebar = () => {
         </button>
         <nav>
             <NavLink 
-                to={"/scholard-frontend-1.0"}
+                to={"/scholard-frontend-1.0/welcome"}
             >
                 <AiOutlineHome></AiOutlineHome>
                 <span>Home</span>
@@ -52,12 +52,14 @@ const Sidebar = () => {
                 <span>All projects</span>
             </NavLink>
             <NavLink
-                to={"/scholard-frontend-1.0/update-and-faqs"}
+                to={"/scholard-frontend-1.0/q"}
             >
                 <RiQuestionnaireLine></RiQuestionnaireLine>
                 <span>Updates and FAQs</span>
             </NavLink>
-            <NavLink>
+            <NavLink
+                to={"/scholard-frontend-1.0/c"}
+            >
                 <BiEditAlt></BiEditAlt>
                 <span>Customization</span>
             </NavLink>

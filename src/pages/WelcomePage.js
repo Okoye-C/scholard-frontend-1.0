@@ -9,7 +9,7 @@ const WelcomePage = () => {
         <Sidebar></Sidebar>
         <main className='welcome-page-main-section'>
             <h1 className='scholard-logo-large'>Scholard</h1>
-            <h2 className='welcome-text-large'>Welcome to sscholar</h2>
+            <h2 className='welcome-text-large'>Welcome to scholard</h2>
             <p className="info-text">
                 Start asking a question and we'll answer it okneionvwo
             </p>

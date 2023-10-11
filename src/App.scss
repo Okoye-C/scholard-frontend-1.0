@@ -2,6 +2,7 @@ $themeColourOne: rgb(154, 150, 199);
 $themeColourTwo: rgb(27, 27, 75);
 $linkFontSize:0;
 $buttonFontSize:0;
+$activeColor: rgb(255, 255, 255);
 
 .WelcomePage{
     display: flex;
@@ -75,6 +76,12 @@ $buttonFontSize:0;
                 font-weight: 600;
                 font-size: 2rem;
             }
+            &:hover{
+                color: rgb(189, 189, 189);
+            }
+            &.active{
+                color: $activeColor;
+            }
         }
     }
     button.logout-btn{
@@ -139,7 +146,7 @@ $buttonFontSize:0;
 }
 
 .welcome-page-main-section{
-    flex-grow: 5;
+    flex-grow: 1;
     background-color: $themeColourTwo;
     display: flex;
     flex-direction: column;
@@ -223,3 +230,43 @@ $buttonFontSize:0;
     }
 }
 
+.SettingsPage{
+    display: flex;
+    height: 100vh;
+    background-color: $themeColourTwo;
+    main{
+        color: white;
+        flex-grow: 1;
+    }
+
+}
+
+.SavedChatsPage{
+    display: flex;
+    height: 100vh;
+    background-color: $themeColourTwo;
+    main{
+        color: white;
+        flex-grow: 1;
+    }
+}
+
+.AllProjectsPage{
+    display: flex;
+    height: 100vh;
+    background-color: $themeColourTwo;
+    main{
+        color: white;
+        flex-grow: 1;
+    }
+}
+
+.TipsAndFeaturesPage{
+    display: flex;
+    height: 100vh;
+    background-color: $themeColourTwo;
+    main{
+        color: white;
+        flex-grow: 1;
+    }
+}

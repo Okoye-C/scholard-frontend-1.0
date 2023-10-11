@@ -70,6 +70,12 @@
   font-weight: 600;
   font-size: 2rem;
 }
+.Sidebar nav a:hover {
+  color: rgb(189, 189, 189);
+}
+.Sidebar nav a.active {
+  color: rgb(255, 255, 255);
+}
 .Sidebar button.logout-btn {
   position: absolute;
   bottom: 4rem;
@@ -123,7 +129,7 @@
   }
 }
 .welcome-page-main-section {
-  flex-grow: 5;
+  flex-grow: 1;
   background-color: rgb(27, 27, 75);
   display: flex;
   flex-direction: column;
@@ -208,4 +214,44 @@
 }
 .MessageTile form.messsage-tile-form button.submit-btn svg {
   transform: translateX(2px);
+}
+
+.SettingsPage {
+  display: flex;
+  height: 100vh;
+  background-color: rgb(27, 27, 75);
+}
+.SettingsPage main {
+  color: white;
+  flex-grow: 1;
+}
+
+.SavedChatsPage {
+  display: flex;
+  height: 100vh;
+  background-color: rgb(27, 27, 75);
+}
+.SavedChatsPage main {
+  color: white;
+  flex-grow: 1;
+}
+
+.AllProjectsPage {
+  display: flex;
+  height: 100vh;
+  background-color: rgb(27, 27, 75);
+}
+.AllProjectsPage main {
+  color: white;
+  flex-grow: 1;
+}
+
+.TipsAndFeaturesPage {
+  display: flex;
+  height: 100vh;
+  background-color: rgb(27, 27, 75);
+}
+.TipsAndFeaturesPage main {
+  color: white;
+  flex-grow: 1;
 }/*# sourceMappingURL=App.css.map */
