@@ -12,9 +12,23 @@ function App() {
             <Route path='/scholard-frontend-1.0'
               element={<WelcomePage></WelcomePage>}
             ></Route>
-            <Route path='/scholard-frontend-1.0/page2'
-              element={<></>}
+           
+            <Route path={"/scholard-frontend-1.0/saved-chats"}
+              element={<WelcomePage></WelcomePage>}
             ></Route>
+           
+            <Route path={"/scholard-frontend-1.0/tips-and-faetures"}
+              element={<WelcomePage></WelcomePage>}
+            ></Route>
+           
+            <Route path={"/scholard-frontend-1.0/all-projects"}
+              element={<WelcomePage></WelcomePage>}
+            ></Route>
+           
+            <Route path="/scholard-frontend-1.0/settings"
+              element={<WelcomePage></WelcomePage>}
+            ></Route>
+           
           </Routes>
         </Router>
       </AppContext.Provider>
