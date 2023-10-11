@@ -6,7 +6,9 @@ const SettingsPage = () => {
     <div className='SettingsPage'>
         <Sidebar></Sidebar>
         <main>
-            Settings
+            <h2>
+              Settings
+            </h2>
         </main>
     </div>
   )

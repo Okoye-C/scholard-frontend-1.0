@@ -6,7 +6,9 @@ const TipsAndFeaturesPage = () => {
     <div className='TipsAndFeaturesPage'>
         <Sidebar></Sidebar>
         <main>
-            TipsAndFeaturesPage
+            <h2>
+              TipsAndFeaturesPage
+            </h2>
         </main>
     </div>
   )

@@ -6,11 +6,18 @@ import AllProjectsPage from './pages/AllProjectsPage';
 import TipsAndFeaturesPage from './pages/TipsAndFeaturesPage';
 import SavedChatsPage from './pages/SavedChatsPage';
 import SettingsPage from './pages/SettingsPage';
+import NotFoundPage from './pages/NotFoundPage';
+import CreateProjectModal from './components/CreateProjectModal';
+import { useState } from 'react';
 
 function App() {
+  const [isCreateProjectModalOpen, setIsCreateProjectModalOpen] = useState(false)
   return (
     <div className="App">
-      <AppContext.Provider>
+      <AppContext.Provider value={{setIsCreateProjectModalOpen}}>
+        {isCreateProjectModalOpen &&
+          <CreateProjectModal></CreateProjectModal>
+       }
         <Router>
           <Routes>
             <Route path='/scholard-frontend-1.0/welcome'
@@ -31,6 +38,10 @@ function App() {
            
             <Route path="/scholard-frontend-1.0/settings"
               element={<SettingsPage></SettingsPage>}
+            ></Route>
+
+            <Route path={"*"}
+              element={<NotFoundPage></NotFoundPage>}
             ></Route>
            
           </Routes>

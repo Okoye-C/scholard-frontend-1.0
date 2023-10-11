@@ -6,7 +6,9 @@ const SavedChatsPage = () => {
     <div className='SavedChatsPage'>
         <Sidebar></Sidebar>
         <main>
-            SavedChatsPage
+            <h2>
+              SavedChatsPage
+            </h2>
         </main>
     </div>
   )

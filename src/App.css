@@ -224,6 +224,9 @@
 .SettingsPage main {
   color: white;
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .SavedChatsPage {
@@ -234,6 +237,9 @@
 .SavedChatsPage main {
   color: white;
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .AllProjectsPage {
@@ -244,6 +250,9 @@
 .AllProjectsPage main {
   color: white;
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .TipsAndFeaturesPage {
@@ -254,4 +263,179 @@
 .TipsAndFeaturesPage main {
   color: white;
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CreateProjectModal {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.674);
+}
+.CreateProjectModal .tile {
+  background-color: rgb(154, 150, 199);
+  padding: 2rem 1rem;
+  border-radius: 2rem;
+  width: 70%;
+  max-width: 50rem;
+}
+.CreateProjectModal .tile .buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.CreateProjectModal .tile .buttons .cancel-btn {
+  background-color: transparent;
+  color: rgb(27, 27, 75);
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.CreateProjectModal .tile .buttons .cancel-btn:hover {
+  color: white;
+  border-color: white;
+}
+.CreateProjectModal .tile .buttons .save-btn {
+  background-color: rgb(27, 27, 75);
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.CreateProjectModal .tile .buttons .save-btn:hover {
+  background-color: white;
+  color: rgb(27, 27, 75);
+}
+.CreateProjectModal .tile h2 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.CreateProjectModal .tile form.create-project-form {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.CreateProjectModal .tile form.create-project-form .field {
+  display: flex;
+  flex-direction: column;
+}
+.CreateProjectModal .tile form.create-project-form .field label {
+  margin-bottom: 0.5rem;
+}
+.CreateProjectModal .tile form.create-project-form .field button {
+  align-self: flex-end;
+  background-color: transparent;
+  border: 1px solid rgb(27, 27, 75);
+  color: rgb(27, 27, 75);
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.CreateProjectModal .tile form.create-project-form .field button:hover {
+  color: white;
+  border-color: white;
+}
+.CreateProjectModal .tile form.create-project-form .field input {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(27, 27, 75);
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+.CreateProjectModal .tile form.create-project-form .field input::-moz-placeholder {
+  color: rgb(75, 73, 73);
+}
+.CreateProjectModal .tile form.create-project-form .field input::placeholder {
+  color: rgb(75, 73, 73);
+}
+.CreateProjectModal .tile form.create-project-form .field-invite {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.CreateProjectModal .tile form.create-project-form .field-invite .invite-btn {
+  align-self: flex-end;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 2rem;
+}
+.CreateProjectModal .tile form.create-project-form .field-invite .container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.CreateProjectModal .tile form.create-project-form .field-invite .container label {
+  margin-bottom: 1rem;
+}
+.CreateProjectModal .tile form.create-project-form .field-invite .container input {
+  box-sizing: border-box;
+  background-color: rgb(27, 27, 75);
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+.CreateProjectModal .tile form.create-project-form .field-invite .container input::-moz-placeholder {
+  color: rgb(75, 73, 73);
+}
+.CreateProjectModal .tile form.create-project-form .field-invite .container input::placeholder {
+  color: rgb(75, 73, 73);
+}
+.CreateProjectModal .tile form.create-project-form .field-invite button {
+  align-self: flex-end;
+  background-color: transparent;
+  border: 1px solid rgb(27, 27, 75);
+  color: rgb(27, 27, 75);
+  padding: 0.3rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.CreateProjectModal .tile form.create-project-form .field-invite button:hover {
+  color: white;
+  border-color: white;
+}
+
+.NotFoundPage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(27, 27, 75);
+  color: white;
+}
+.NotFoundPage .tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.NotFoundPage .tile a {
+  color: white;
+  font-size: 2rem;
+}
+.NotFoundPage .tile a:hover {
+  color: gray;
 }/*# sourceMappingURL=App.css.map */

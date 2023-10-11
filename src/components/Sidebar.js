@@ -4,7 +4,16 @@ import {RiQuestionnaireLine} from "react-icons/ri";
 import {AiOutlineFolder, AiOutlineHome, AiOutlineStar, AiOutlineFolderAdd} from "react-icons/ai";
 import {BsSave} from "react-icons/bs";
 import { NavLink } from 'react-router-dom';
+import AppContext from '../context/AppContext';
+import { useContext } from 'react';
+
+
 const Sidebar = () => {
+
+    const {setIsCreateProjectModalOpen} = useContext(AppContext);
+    const handleOpenCreateProjectModal = () => {
+        setIsCreateProjectModalOpen(true);
+    }
   return (
     <div className='Sidebar'>
         <div className="head">
@@ -22,7 +31,9 @@ const Sidebar = () => {
             </div>
         </div>
 
-        <button className="new-project-btn">
+        <button className="new-project-btn"
+            onClick={() => handleOpenCreateProjectModal()}
+        >
             <AiOutlineFolderAdd></AiOutlineFolderAdd>
             <span>New project</span>
         </button>

@@ -6,7 +6,9 @@ const AllProjectsPage = () => {
     <div className='AllProjectsPage'>
         <Sidebar></Sidebar>
         <main>
-            AllProjectsPage
+            <h2>
+              AllProjectsPage
+            </h2>
         </main>
     </div>
   )
