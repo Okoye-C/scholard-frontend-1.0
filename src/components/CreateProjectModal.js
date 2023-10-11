@@ -5,11 +5,13 @@ import { useContext } from 'react'
 const CreateProjectModal = () => {
     const {setIsCreateProjectModalOpen} = useContext(AppContext);
 
-    const handleCloseCreateProjectModal = () => {
+    const handleCloseCreateProjectModal = (e) => {
+        e.preventDefault();
         setIsCreateProjectModalOpen(false);
     }
 
-    const handleCreateProject = () => {
+    const handleCreateProject = (e) => {
+        e.preventDefault();
         setIsCreateProjectModalOpen(false);
     }
   return (
@@ -28,7 +30,11 @@ const CreateProjectModal = () => {
                 <div className="field">
                     <label>Members</label>
                     <input type="text" className='memebers-inp'/>
-                    <button className="add-members-btn">
+                    <button className="add-members-btn"
+                        onClick={(e) => {
+                            e.preventDefault();
+                        }}  
+                    >
                         Add member
                     </button>
                 </div>
@@ -37,13 +43,21 @@ const CreateProjectModal = () => {
                         <label>Invite link</label>
                         <input type="text" className='invite-inp'/>
                     </div>
-                    <button className="invite-btn">
+                    <button className="invite-btn"
+                        onClick={(e) => {
+                            e.preventDefault();
+                        }}  
+                    >
                         Invite
                     </button>
                 </div>
-                <div className="buttons">
+                <div className="buttons"
+                    onClick={(e) => {
+                        e.preventDefault();
+                    }}
+                >
                     <button className='cancel-btn'
-                        onClick={() => handleCloseCreateProjectModal()}
+                        onClick={(e) => handleCloseCreateProjectModal(e)}
                     >
                         Cancel
                     </button>
