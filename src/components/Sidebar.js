@@ -39,7 +39,7 @@ const Sidebar = () => {
         </button>
         <nav>
             <NavLink 
-                to={"/welcome"}
+                to={"/scholard-frontend-1.0"}
             >
                 <AiOutlineHome></AiOutlineHome>
                 <span>Home</span>

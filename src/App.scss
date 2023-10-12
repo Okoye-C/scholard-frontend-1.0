@@ -1,9 +1,22 @@
-$themeColourOne: rgb(154, 150, 199);
-$themeColourTwo: rgb(27, 27, 75);
+$themeColourOne: rgb(118, 114, 152);
+$themeColourTwo: rgb(20, 20, 54);
 $linkFontSize:0;
 $buttonFontSize:0;
 $activeColor: rgb(255, 255, 255);
+$myGrey:  rgb(189, 189, 189);
+$myGreen: rgb(0, 252, 76);
 
+.App{
+    padding: 3rem;
+    padding-left: 31rem;
+    padding-top: 8rem;
+}
+
+@media (max-width:720px) {
+    .App{
+       padding-left: 10rem; 
+    }
+}
 .WelcomePage{
     display: flex;
     // background-color: red;
@@ -17,6 +30,10 @@ $activeColor: rgb(255, 255, 255);
     gap: 2rem;
     padding: 2rem;
     padding-right: 6rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
     .head{
         display: flex;
         gap: 1rem;
@@ -52,6 +69,16 @@ $activeColor: rgb(255, 255, 255);
         display: flex;
         align-items: center;
         gap: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        &:hover{
+            background-color: white;
+            color: $themeColourTwo;
+            svg{
+                color: $themeColourTwo;
+            }
+        }
         svg{
             color: white;
             font-size: 2rem;
@@ -64,7 +91,6 @@ $activeColor: rgb(255, 255, 255);
         font-size: 1.5rem;
         padding: 2rem;
         padding-top: 1rem;
-        
         a{
             color: $themeColourTwo;
             text-decoration: none;
@@ -72,15 +98,16 @@ $activeColor: rgb(255, 255, 255);
             display: flex;
             align-items: center;
             gap: 1rem;
+            transition: all 0.2s;
             svg{
                 font-weight: 600;
                 font-size: 2rem;
             }
             &:hover{
-                color: rgb(189, 189, 189);
+                color: $myGrey
             }
             &.active{
-                color: $activeColor;
+                color: $myGreen;
             }
         }
     }
@@ -150,7 +177,7 @@ $activeColor: rgb(255, 255, 255);
     background-color: $themeColourTwo;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     color: $themeColourOne;
     gap: 1rem;
@@ -212,6 +239,11 @@ $activeColor: rgb(255, 255, 255);
             padding: 0.5rem;
             font-size: 1.8rem;
             border-radius: 3rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            &:hover{
+                color: white;
+            }
         }
         button.submit-btn{
             background-color: $themeColourTwo;
@@ -225,6 +257,16 @@ $activeColor: rgb(255, 255, 255);
             border-radius: 3rem;
             svg{
                 transform: translateX(2px);
+            }
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            &:hover{
+                background-color: white;
+                color: $themeColourTwo;
+                svg{
+                    color: $themeColourTwo;
+                }
             }
         }
     }
@@ -252,8 +294,27 @@ $activeColor: rgb(255, 255, 255);
         color: white;
         flex-grow: 1;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        h2{
+            background-color: $themeColourTwo;
+            position: fixed;
+            top: 0;
+            margin: 0;
+            right: 0;
+            left: 27.6rem;
+            padding: 2rem;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .SavedChatsPage{
+        main{
+            h2{
+                left: 7rem;
+            }
+        }
     }
 }
 
@@ -315,6 +376,7 @@ $activeColor: rgb(255, 255, 255);
                 border-radius: 4px;
                 border: none;
                 cursor: pointer;
+                transition: all 0.2s;
                 &:hover{
                     color: white;
                     border-color: white;
@@ -327,6 +389,7 @@ $activeColor: rgb(255, 255, 255);
                 border-radius: 4px;
                 border: none;
                 cursor: pointer;
+                transition: all 0.2s;
                 &:hover{
                     background-color: white;
                     color: $themeColourTwo;
@@ -358,6 +421,7 @@ $activeColor: rgb(255, 255, 255);
                     padding: 0.5rem 2rem;
                     border-radius: 4px;
                     cursor: pointer;
+                    transition: all 0.2s;
                     &:hover{
                         color: white;
                         border-color: white;
@@ -448,5 +512,56 @@ $activeColor: rgb(255, 255, 255);
                 color: gray;
             }
         }
+    }
+}
+
+
+.SavedChatTile{
+    background-color: $themeColourOne;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.3rem;
+    max-width: 70rem;
+    margin: 0 auto;
+    border-radius: 2rem;
+    &:last-child{
+        margin-bottom: 2rem;
+    }
+    button{
+        background-color: transparent;
+        border: none;
+        color: $myGreen;
+        font-size: 1.8rem;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+    .upper-buttons{
+        align-self: flex-end;
+    }
+    p{
+        padding: 0;
+        margin: 0;
+    }
+    .lower-buttons{
+        display: flex;
+        justify-content: space-between;
+        a{
+            color: $myGreen;
+        }
+    }
+    .data-asked{
+        color: $myGrey;
+    }
+    .question{
+        color: $themeColourTwo;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .text-content{
+        color: white;
     }
 }
