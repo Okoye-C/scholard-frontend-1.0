@@ -30,3 +30,5 @@ const SavedChatTile = ({question, dataAsked,textContent}) => {
 }
 
 export default SavedChatTile
+
+

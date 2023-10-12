@@ -12,9 +12,19 @@ import { useState } from 'react';
 
 function App() {
   const [isCreateProjectModalOpen, setIsCreateProjectModalOpen] = useState(false)
+  const [currentMessages, setCurrentMessages] = useState([
+    {
+      fromSelf: false,
+      msg: "Welcome to scholard"
+    }
+  ]);
   return (
     <div className="App">
-      <AppContext.Provider value={{setIsCreateProjectModalOpen}}>
+      <AppContext.Provider value={{
+        setIsCreateProjectModalOpen,
+        currentMessages, 
+        setCurrentMessages
+      }}>
         {isCreateProjectModalOpen &&
           <CreateProjectModal></CreateProjectModal>
        }
