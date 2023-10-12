@@ -24,7 +24,7 @@ const Sidebar = () => {
                 <span className='name'> John Doe</span>
                 <span className='email'> John.Doe@gmail.com</span>
                 <NavLink className='acct-settings-link'
-                    to={"/scholard-frontend-1.0/settings"}
+                    to={"/settings"}
                 >
                     account settings
                 </NavLink>
@@ -39,37 +39,37 @@ const Sidebar = () => {
         </button>
         <nav>
             <NavLink 
-                to={"/scholard-frontend-1.0/welcome"}
+                to={"/welcome"}
             >
                 <AiOutlineHome></AiOutlineHome>
                 <span>Home</span>
             </NavLink>
             <NavLink 
-                to={"/scholard-frontend-1.0/saved-chats"}
+                to={"/saved-chats"}
             >
                 <BsSave></BsSave>
                 <span>Saved chats</span>
             </NavLink>
             <NavLink 
-                to={"/scholard-frontend-1.0/tips-and-faetures"}
+                to={"/tips-and-faetures"}
             >
                 <AiOutlineStar></AiOutlineStar>
                 <span>Tips and Features</span>
             </NavLink>
             <NavLink
-                to={"/scholard-frontend-1.0/all-projects"}
+                to={"/all-projects"}
             >
                 <AiOutlineFolder></AiOutlineFolder>
                 <span>All projects</span>
             </NavLink>
             <NavLink
-                to={"/scholard-frontend-1.0/q"}
+                to={"/q"}
             >
                 <RiQuestionnaireLine></RiQuestionnaireLine>
                 <span>Updates and FAQs</span>
             </NavLink>
             <NavLink
-                to={"/scholard-frontend-1.0/c"}
+                to={"/c"}
             >
                 <BiEditAlt></BiEditAlt>
                 <span>Customization</span>

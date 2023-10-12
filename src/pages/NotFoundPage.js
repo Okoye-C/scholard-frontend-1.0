@@ -8,7 +8,7 @@ const NotFoundPage = () => {
             <h2>
                 Sorry this page has not been created yet
             </h2>
-            <Link to={"/scholard-frontend-1.0/welcome"}>
+            <Link to={"/scholard-frontend-1.0"}>
                 Home
             </Link>
             </div>

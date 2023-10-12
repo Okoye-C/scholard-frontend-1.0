@@ -20,23 +20,23 @@ function App() {
        }
         <Router>
           <Routes>
-            <Route path='/scholard-frontend-1.0/welcome'
+            <Route path='/scholard-frontend-1.0'
               element={<WelcomePage></WelcomePage>}
             ></Route>
            
-            <Route path={"/scholard-frontend-1.0/saved-chats"}
+            <Route path={"/saved-chats"}
               element={<SavedChatsPage></SavedChatsPage>}
             ></Route>
            
-            <Route path={"/scholard-frontend-1.0/tips-and-faetures"}
+            <Route path={"/tips-and-faetures"}
               element={<TipsAndFeaturesPage></TipsAndFeaturesPage>}
             ></Route>
            
-            <Route path={"/scholard-frontend-1.0/all-projects"}
+            <Route path={"/all-projects"}
               element={<AllProjectsPage></AllProjectsPage>}
             ></Route>
-           
-            <Route path="/scholard-frontend-1.0/settings"
+
+            <Route path="/settings"
               element={<SettingsPage></SettingsPage>}
             ></Route>
 
