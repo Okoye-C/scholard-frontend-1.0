@@ -7,9 +7,9 @@ $myGrey:  rgb(189, 189, 189);
 $myGreen: rgb(0, 252, 76);
 
 body{
-    // &::-webkit-scrollbar{
-    //     display: none;
-    // }
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }
 
 .App{
