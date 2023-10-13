@@ -30,7 +30,7 @@ const MessageTile = () => {
         setBlockSending(true)
         setIsLoading(true);
         try {
-            const res = await fetch("https://jsonplaceholder.typicode.com/comments/256");
+            const res = await fetch(`https://jsonplaceholder.typicode.com/comments/${1 + Math.floor( (Math.random() * 499))}`);
             const data = await res.json();
             const aiResponse = data.body;
             setCurrentMessages([
