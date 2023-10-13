@@ -21,7 +21,8 @@ const WelcomePage = () => {
           File name
         </h2>
         <main className='welcome-page-main-section'>
-            {currentMessages.map((message) => (
+          <div className="scroll-blocker"></div>
+            {usedList.map((message) => (
               <WelcomePageMessageTile 
                 key={Math.random()}
                 message={message}

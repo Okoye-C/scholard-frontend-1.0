@@ -1,7 +1,3 @@
-body::-webkit-scrollbar {
-  display: none;
-}
-
 .App {
   padding: 0rem 3rem;
   padding-left: 31rem;
@@ -205,6 +201,7 @@ body::-webkit-scrollbar {
   gap: 0rem;
   font-size: 1.3rem;
   max-width: 70rem;
+  margin-right: 2rem;
   border-radius: 2rem;
 }
 .welcomepage-message-tile button {
@@ -275,6 +272,7 @@ body::-webkit-scrollbar {
   margin: 0 auto;
   padding-bottom: 12rem;
   max-height: 100%;
+  overflow-y: scroll;
 }
 .welcome-page-main-section h1.scholard-logo-large {
   padding: 0;
@@ -307,6 +305,7 @@ body::-webkit-scrollbar {
   background-color: rgb(20, 20, 54);
   padding: 1rem 4rem;
   padding-bottom: 3rem;
+  z-index: 2;
 }
 .MessageTile .loading-tile,
 .MessageTile .error-tile {
@@ -425,6 +424,9 @@ body::-webkit-scrollbar {
   align-items: flex-end;
   gap: 2rem;
 }
+.SavedChatsPage .saved-chats::-webkit-scrollbar {
+  display: none;
+}
 .SavedChatsPage main {
   color: white;
   flex-grow: 1;
@@ -432,6 +434,9 @@ body::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+}
+.SavedChatsPage main::-webkit-scrollbar {
+  display: none;
 }
 .SavedChatsPage main h2 {
   background-color: rgb(20, 20, 54);
