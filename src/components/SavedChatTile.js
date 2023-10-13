@@ -19,7 +19,7 @@ const SavedChatTile = ({question, dataAsked,textContent}) => {
       <p className="text-content">{textContent}</p>
       <div className="lower-buttons">
         <a href="#" className="view-source">
-          View source of information
+          View source
         </a>
         <button className="copy">
           <BiCopy></BiCopy>

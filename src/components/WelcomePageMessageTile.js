@@ -34,7 +34,7 @@ const WelcomePageMessageTile = ({message}) => {
         <div className="lower-buttons">
         {message.fromSelf && 
             <a href="#" className="view-source">
-                View source of information
+                View source
             </a>
         }
         {message.fromSelf && 
@@ -42,6 +42,7 @@ const WelcomePageMessageTile = ({message}) => {
                 Regenerate response
             </button>
         }
+        <div className="spacer"></div>
         <button className="copy"
             style={{
                 color: message.fromSelf ? "" : "black",

@@ -6,10 +6,34 @@ $activeColor: rgb(255, 255, 255);
 $myGrey:  rgb(189, 189, 189);
 $myGreen: rgb(0, 252, 76);
 
+body{
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
 .App{
     padding: 0rem 3rem;
     padding-left: 31rem;
+    &::-webkit-scrollbar{
+        display: none;
+    }
     // padding-top: 8rem;
+    .utility-buttons{
+        position: fixed;
+        top: 2rem;
+        right: 3rem;
+        z-index: 10000000;
+        display: flex;
+        gap: 1rem;
+        button{
+            color: white;
+            background: transparent;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
 }
 
 @media (max-width:720px) {
@@ -24,6 +48,26 @@ $myGreen: rgb(0, 252, 76);
     box-sizing: border-box;
     height: 100vh;
     max-height: 100vh;
+    h2{
+        background-color: $themeColourTwo;
+        position: fixed;
+        top: 0;
+        margin: 0;
+        right: 0;
+        left: 27.6rem;
+        background-color: $themeColourTwo;
+        padding: 2rem;
+        color: white;
+        text-align: center;
+    }
+}
+
+@media (max-width: 720px) {
+    .WelcomePage{
+        h2{
+            left: 7rem;
+        }
+    }
 }
 
 .Sidebar{
@@ -185,17 +229,11 @@ $myGreen: rgb(0, 252, 76);
     padding: 1rem 3rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0rem;
     font-size: 1.3rem;
     max-width: 70rem;
     // margin: 0 auto;
     border-radius: 2rem;
-    &:first-child{
-        .text-content{
-            font-size: 2rem;
-            font-weight: 600;
-        }
-    }
     button{
         background-color: transparent;
         border: none;
@@ -216,8 +254,31 @@ $myGreen: rgb(0, 252, 76);
     .lower-buttons{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
         a{
             color: $myGreen;
+            font-size: 1.4rem;
+            // background-color: red;
+            // min-width: 17rem;
+            width: auto;
+
+        }
+        .regenerate-btn{
+            background-color: transparent;
+            border: none;
+            font-size: 1.4rem;
+            transform: translateY(3px);
+            margin-right: 1rem;
+            // background-color: red;
+            // min-width: 15rem;
+            width: auto;
+        }
+        .spacer{
+            flex-grow: 1;
+        }
+        .copy{
+            transform: translateY(3px);
         }
     }
     .data-asked{
@@ -230,6 +291,8 @@ $myGreen: rgb(0, 252, 76);
     }
     .text-content{
         color: white;
+        padding: 0;
+        margin: 0;
     }
 }
 
@@ -237,7 +300,10 @@ $myGreen: rgb(0, 252, 76);
     flex-grow: 1;
     background-color: $themeColourTwo;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    //Uncommenting this removes 
+    // the ability for the welcome 
+    //to scroll up 
     // justify-content: flex-end;
     align-items: flex-end;
     color: $themeColourOne;
@@ -251,6 +317,7 @@ $myGreen: rgb(0, 252, 76);
     &::-webkit-scrollbar{
         display: none;
     }
+    
     h1.scholard-logo-large{
         padding: 0;
         margin: 0;
@@ -281,10 +348,29 @@ $myGreen: rgb(0, 252, 76);
     left: 27rem;
     right: 0;
     background-color: $themeColourTwo;
-    padding: 1rem;
+    padding: 1rem 4rem;
     padding-bottom: 3rem;
+    .loading-tile,
+    .error-tile{
+        border-left: 2px solid $myGreen;
+        color: black;
+        font-size: 1.4rem;
+        background-color: $myGrey;
+        width: 15rem;
+        padding: 2rem;
+        position: absolute;
+        top: -5rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .error-tile{
+        color: red;
+        border-color: red;
+    }
+
     form.messsage-tile-form{
-        width: 60%;
+        width: 100%;
+        max-width: 70rem;
         margin: 0 auto;
         background-color: $themeColourOne;
         padding: 0.5rem;
@@ -372,6 +458,9 @@ $myGreen: rgb(0, 252, 76);
     height: 100vh;
     background-color: $themeColourTwo;
     padding-top: 8rem;
+    &::-webkit-scrollbar{
+        display: none;
+    }
     .saved-chats{
         max-width: 70rem;
         margin: 0 auto;
@@ -379,6 +468,9 @@ $myGreen: rgb(0, 252, 76);
         flex-direction: column;
         align-items: flex-end;
         gap: 2rem;
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
     main{
         color: white;
@@ -387,6 +479,9 @@ $myGreen: rgb(0, 252, 76);
         flex-direction: column;
         align-items: center;
         gap: 2rem;
+        &::-webkit-scrollbar{
+            display: none;
+        }
         h2{
             background-color: $themeColourTwo;
             position: fixed;
@@ -437,7 +532,7 @@ $myGreen: rgb(0, 252, 76);
 
 
 .CreateProjectModal{
-    z-index: 100;
+    z-index: 1000000000;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -548,7 +643,7 @@ $myGreen: rgb(0, 252, 76);
                     display: flex;
                     flex-direction: column;
                     label{
-                        margin-bottom: 1rem;
+                        margin-bottom: 0.5rem;
                     }
                     input{
                         box-sizing: border-box;
@@ -586,7 +681,7 @@ $myGreen: rgb(0, 252, 76);
 
 .NotFoundPage{
     height: 100vh;
-    width: 100vw;
+    // width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -656,4 +751,5 @@ $myGreen: rgb(0, 252, 76);
         color: white;
     }
 }
+
 

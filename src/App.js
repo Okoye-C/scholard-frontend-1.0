@@ -8,6 +8,9 @@ import SavedChatsPage from './pages/SavedChatsPage';
 import SettingsPage from './pages/SettingsPage';
 import NotFoundPage from './pages/NotFoundPage';
 import CreateProjectModal from './components/CreateProjectModal';
+import {AiOutlineStar} from "react-icons/ai";
+import {RiQuestionnaireLine} from "react-icons/ri";
+
 import { useState } from 'react';
 
 function App() {
@@ -28,6 +31,14 @@ function App() {
         {isCreateProjectModalOpen &&
           <CreateProjectModal></CreateProjectModal>
        }
+       <div className="utility-buttons">
+        <button className="question">
+          <RiQuestionnaireLine></RiQuestionnaireLine>
+        </button>
+        <button className="upload">
+          <AiOutlineStar></AiOutlineStar>
+        </button>
+       </div>
         <Router>
           <Routes>
             <Route path='/scholard-frontend-1.0'

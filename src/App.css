@@ -1,6 +1,28 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .App {
   padding: 0rem 3rem;
   padding-left: 31rem;
+}
+.App::-webkit-scrollbar {
+  display: none;
+}
+.App .utility-buttons {
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  z-index: 10000000;
+  display: flex;
+  gap: 1rem;
+}
+.App .utility-buttons button {
+  color: white;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 @media (max-width: 720px) {
@@ -15,7 +37,24 @@
   height: 100vh;
   max-height: 100vh;
 }
+.WelcomePage h2 {
+  background-color: rgb(20, 20, 54);
+  position: fixed;
+  top: 0;
+  margin: 0;
+  right: 0;
+  left: 27.6rem;
+  background-color: rgb(20, 20, 54);
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
 
+@media (max-width: 720px) {
+  .WelcomePage h2 {
+    left: 7rem;
+  }
+}
 .Sidebar {
   background-color: rgb(118, 114, 152);
   display: flex;
@@ -166,14 +205,10 @@
   padding: 1rem 3rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0rem;
   font-size: 1.3rem;
   max-width: 70rem;
   border-radius: 2rem;
-}
-.welcomepage-message-tile:first-child .text-content {
-  font-size: 2rem;
-  font-weight: 600;
 }
 .welcomepage-message-tile button {
   background-color: transparent;
@@ -195,9 +230,27 @@
 .welcomepage-message-tile .lower-buttons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 .welcomepage-message-tile .lower-buttons a {
   color: rgb(0, 252, 76);
+  font-size: 1.4rem;
+  width: auto;
+}
+.welcomepage-message-tile .lower-buttons .regenerate-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.4rem;
+  transform: translateY(3px);
+  margin-right: 1rem;
+  width: auto;
+}
+.welcomepage-message-tile .lower-buttons .spacer {
+  flex-grow: 1;
+}
+.welcomepage-message-tile .lower-buttons .copy {
+  transform: translateY(3px);
 }
 .welcomepage-message-tile .data-asked {
   color: rgb(189, 189, 189);
@@ -209,13 +262,15 @@
 }
 .welcomepage-message-tile .text-content {
   color: white;
+  padding: 0;
+  margin: 0;
 }
 
 .welcome-page-main-section {
   flex-grow: 1;
   background-color: rgb(20, 20, 54);
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: flex-end;
   color: rgb(118, 114, 152);
   gap: 1rem;
@@ -257,11 +312,29 @@
   left: 27rem;
   right: 0;
   background-color: rgb(20, 20, 54);
-  padding: 1rem;
+  padding: 1rem 4rem;
   padding-bottom: 3rem;
 }
+.MessageTile .loading-tile,
+.MessageTile .error-tile {
+  border-left: 2px solid rgb(0, 252, 76);
+  color: black;
+  font-size: 1.4rem;
+  background-color: rgb(189, 189, 189);
+  width: 15rem;
+  padding: 2rem;
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.MessageTile .error-tile {
+  color: red;
+  border-color: red;
+}
 .MessageTile form.messsage-tile-form {
-  width: 60%;
+  width: 100%;
+  max-width: 70rem;
   margin: 0 auto;
   background-color: rgb(118, 114, 152);
   padding: 0.5rem;
@@ -351,6 +424,9 @@
   background-color: rgb(20, 20, 54);
   padding-top: 8rem;
 }
+.SavedChatsPage::-webkit-scrollbar {
+  display: none;
+}
 .SavedChatsPage .saved-chats {
   max-width: 70rem;
   margin: 0 auto;
@@ -359,6 +435,9 @@
   align-items: flex-end;
   gap: 2rem;
 }
+.SavedChatsPage .saved-chats::-webkit-scrollbar {
+  display: none;
+}
 .SavedChatsPage main {
   color: white;
   flex-grow: 1;
@@ -366,6 +445,9 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+}
+.SavedChatsPage main::-webkit-scrollbar {
+  display: none;
 }
 .SavedChatsPage main h2 {
   background-color: rgb(20, 20, 54);
@@ -409,7 +491,7 @@
 }
 
 .CreateProjectModal {
-  z-index: 100;
+  z-index: 1000000000;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -528,7 +610,7 @@
   flex-direction: column;
 }
 .CreateProjectModal .tile form.create-project-form .field-invite .container label {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .CreateProjectModal .tile form.create-project-form .field-invite .container input {
   box-sizing: border-box;
@@ -563,7 +645,6 @@
 
 .NotFoundPage {
   height: 100vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
