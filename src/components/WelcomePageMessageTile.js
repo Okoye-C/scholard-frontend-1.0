@@ -2,6 +2,7 @@ import React from 'react'
 import {LiaEditSolid} from "react-icons/lia";
 import {BsFillBookmarkFill} from "react-icons/bs";
 import {BiCopy} from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 const WelcomePageMessageTile = ({message}) => {
   return (
@@ -33,9 +34,9 @@ const WelcomePageMessageTile = ({message}) => {
         </div>
         <div className="lower-buttons">
         {message.fromSelf && 
-            <a href="#" className="view-source">
+            <Link href="#" className="view-source">
                 View source
-            </a>
+            </Link>
         }
         {message.fromSelf && 
             <button className='regenerate-btn'>
