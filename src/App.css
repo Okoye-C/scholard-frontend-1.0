@@ -424,9 +424,6 @@
   align-items: flex-end;
   gap: 2rem;
 }
-.SavedChatsPage .saved-chats::-webkit-scrollbar {
-  display: none;
-}
 .SavedChatsPage main {
   color: white;
   flex-grow: 1;
@@ -434,9 +431,6 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-}
-.SavedChatsPage main::-webkit-scrollbar {
-  display: none;
 }
 .SavedChatsPage main h2 {
   background-color: rgb(20, 20, 54);

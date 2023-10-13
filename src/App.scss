@@ -472,9 +472,9 @@ body{
         flex-direction: column;
         align-items: flex-end;
         gap: 2rem;
-        &::-webkit-scrollbar{
-            display: none;
-        }
+        // &::-webkit-scrollbar{
+        //     display: none;
+        // }
     }
     main{
         color: white;
@@ -483,9 +483,9 @@ body{
         flex-direction: column;
         align-items: center;
         gap: 2rem;
-        &::-webkit-scrollbar{
-            display: none;
-        }
+        // &::-webkit-scrollbar{
+        //     display: none;
+        // }
         h2{
             background-color: $themeColourTwo;
             position: fixed;
