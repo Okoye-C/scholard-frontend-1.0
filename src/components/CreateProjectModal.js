@@ -62,7 +62,7 @@ const CreateProjectModal = () => {
                         Cancel
                     </button>
                     <button className="save-btn"
-                        onClick={() => handleCreateProject()}
+                        onClick={(e) => handleCreateProject(e)}
                     >
                         Save
                     </button>
