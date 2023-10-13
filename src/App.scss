@@ -23,7 +23,7 @@ body{
         position: fixed;
         top: 2rem;
         right: 3rem;
-        z-index: 10000000;
+        z-index: 100;
         display: flex;
         gap: 1rem;
         button{
@@ -81,7 +81,7 @@ body{
     left: 0;
     top: 0;
     bottom: 0;
-    z-index: 1000;
+    z-index: 100;
     .head{
         display: flex;
         gap: 1rem;
@@ -532,7 +532,7 @@ body{
 
 
 .CreateProjectModal{
-    z-index: 1000000000;
+    z-index: 1000;
     position: fixed;
     top: 0;
     bottom: 0;
