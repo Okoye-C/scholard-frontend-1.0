@@ -7,17 +7,17 @@ $myGrey:  rgb(189, 189, 189);
 $myGreen: rgb(0, 252, 76);
 
 body{
-    &::-webkit-scrollbar{
-        display: none;
-    }
+    // &::-webkit-scrollbar{
+    //     display: none;
+    // }
 }
 
 .App{
     padding: 0rem 3rem;
     padding-left: 31rem;
-    &::-webkit-scrollbar{
-        display: none;
-    }
+    // &::-webkit-scrollbar{
+    //     display: none;
+    // }
     // padding-top: 8rem;
     .utility-buttons{
         position: fixed;
@@ -313,10 +313,10 @@ body{
     // background-color: red;
     padding-bottom: 12rem;
     max-height: 100%;
-    overflow-y: scroll;
-    &::-webkit-scrollbar{
-        display: none;
-    }
+    // overflow-y: scroll;
+    // &::-webkit-scrollbar{
+    //     display: none;
+    // }
     
     h1.scholard-logo-large{
         padding: 0;
@@ -458,9 +458,9 @@ body{
     height: 100vh;
     background-color: $themeColourTwo;
     padding-top: 8rem;
-    &::-webkit-scrollbar{
-        display: none;
-    }
+    // &::-webkit-scrollbar{
+    //     display: none;
+    // }
     .saved-chats{
         max-width: 70rem;
         margin: 0 auto;
@@ -468,9 +468,9 @@ body{
         flex-direction: column;
         align-items: flex-end;
         gap: 2rem;
-        &::-webkit-scrollbar{
-            display: none;
-        }
+        // &::-webkit-scrollbar{
+        //     display: none;
+        // }
     }
     main{
         color: white;
@@ -479,9 +479,9 @@ body{
         flex-direction: column;
         align-items: center;
         gap: 2rem;
-        &::-webkit-scrollbar{
-            display: none;
-        }
+        // &::-webkit-scrollbar{
+        //     display: none;
+        // }
         h2{
             background-color: $themeColourTwo;
             position: fixed;

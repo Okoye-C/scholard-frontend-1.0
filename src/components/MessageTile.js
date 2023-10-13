@@ -26,34 +26,34 @@ const MessageTile = () => {
         setCurrentMessage("");
     }
 
-    const fetchResponse = async (message) => {
-        setBlockSending(true)
-        setIsLoading(true);
-        try {
-            const res = await fetch(`https://jsonplaceholder.typicode.com/comments/${1 + Math.floor( (Math.random() * 499))}`);
-            const data = await res.json();
-            const aiResponse = data.body;
-            setCurrentMessages([
-                ...currentMessages,
-                {
-                    fromSelf: true,
-                    msg: message,
-                },
-                {
-                    fromSelf: false,
-                    msg: aiResponse,
-                }
-            ]);
-        } catch (error) {
-            setIsLoading(false);
-            setError("An error ocurred");
-        }
-        setIsLoading(false);
-        setTimeout(() => {
-            setError(null);
-            setBlockSending(false);
-        }, 2000);
-    }
+    // const fetchResponse = async (message) => {
+    //     setBlockSending(true)
+    //     setIsLoading(true);
+    //     try {
+    //         const res = await fetch(`https://jsonplaceholder.typicode.com/comments/${1 + Math.floor( (Math.random() * 499))}`);
+    //         const data = await res.json();
+    //         const aiResponse = data.body;
+    //         setCurrentMessages([
+    //             ...currentMessages,
+    //             {
+    //                 fromSelf: true,
+    //                 msg: message,
+    //             },
+    //             {
+    //                 fromSelf: false,
+    //                 msg: aiResponse,
+    //             }
+    //         ]);
+    //     } catch (error) {
+    //         setIsLoading(false);
+    //         setError("An error ocurred");
+    //     }
+    //     setIsLoading(false);
+    //     setTimeout(() => {
+    //         setError(null);
+    //         setBlockSending(false);
+    //     }, 2000);
+    // }
 
   return (
     <div className='MessageTile'>
@@ -88,7 +88,7 @@ const MessageTile = () => {
                     if (currentMessage.length === 0) return;
                     const message = currentMessage;
                     handleSendMessage(e);
-                    fetchResponse(message);
+                    // fetchResponse(message);
                 }}  
             >
                 <AiOutlineSend></AiOutlineSend>

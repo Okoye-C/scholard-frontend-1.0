@@ -8,12 +8,12 @@ import WelcomePageMessageTile from '../components/WelcomePageMessageTile'
 const WelcomePage = () => {
   const bottomRef = useRef();
   const {currentMessages} = useContext(AppContext);
-  const [usedList, setUsedList] = useState(currentMessages.toReversed());
+  // const [usedList, setUsedList] = useState(currentMessages.toReversed());
 
-  useEffect(() => {
-    // bottomRef.current.scrollIntoView();
-    setUsedList(currentMessages.toReversed());
-  }, [currentMessages])
+  // useEffect(() => {
+  //   // bottomRef.current.scrollIntoView();
+  //   setUsedList(currentMessages.toReversed());
+  // }, [currentMessages])
   return (
     <div className='WelcomePage'>
         <Sidebar></Sidebar>
@@ -21,7 +21,7 @@ const WelcomePage = () => {
           File name
         </h2>
         <main className='welcome-page-main-section'>
-            {usedList.map((message) => (
+            {currentMessages.map((message) => (
               <WelcomePageMessageTile 
                 key={Math.random()}
                 message={message}
