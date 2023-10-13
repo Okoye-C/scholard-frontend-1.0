@@ -1,3 +1,11 @@
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .App {
   padding: 0rem 3rem;
   padding-left: 31rem;
@@ -273,6 +281,11 @@
   padding-bottom: 12rem;
   max-height: 100%;
   overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+.welcome-page-main-section::-webkit-scrollbar {
+  display: none;
 }
 .welcome-page-main-section h1.scholard-logo-large {
   padding: 0;
