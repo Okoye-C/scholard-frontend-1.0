@@ -6,9 +6,6 @@ body::-webkit-scrollbar {
   padding: 0rem 3rem;
   padding-left: 31rem;
 }
-.App::-webkit-scrollbar {
-  display: none;
-}
 .App .utility-buttons {
   position: fixed;
   top: 2rem;
@@ -280,9 +277,6 @@ body::-webkit-scrollbar {
   max-height: 100%;
   overflow-y: scroll;
 }
-.welcome-page-main-section::-webkit-scrollbar {
-  display: none;
-}
 .welcome-page-main-section h1.scholard-logo-large {
   padding: 0;
   margin: 0;
@@ -424,9 +418,6 @@ body::-webkit-scrollbar {
   background-color: rgb(20, 20, 54);
   padding-top: 8rem;
 }
-.SavedChatsPage::-webkit-scrollbar {
-  display: none;
-}
 .SavedChatsPage .saved-chats {
   max-width: 70rem;
   margin: 0 auto;
@@ -435,9 +426,6 @@ body::-webkit-scrollbar {
   align-items: flex-end;
   gap: 2rem;
 }
-.SavedChatsPage .saved-chats::-webkit-scrollbar {
-  display: none;
-}
 .SavedChatsPage main {
   color: white;
   flex-grow: 1;
@@ -445,9 +433,6 @@ body::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-}
-.SavedChatsPage main::-webkit-scrollbar {
-  display: none;
 }
 .SavedChatsPage main h2 {
   background-color: rgb(20, 20, 54);
