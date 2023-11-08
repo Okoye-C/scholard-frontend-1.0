@@ -534,6 +534,91 @@ body{
         justify-content: center;
         align-items: center;
     }
+     .tipsandfeatures {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 5rem;
+        padding-top: 5rem;
+
+        p {
+            padding: 2.5rem;
+        }
+
+        .featuresContentsP,
+        .tipsContents {
+            background-color: $themeColourOne;
+            border-radius: 10px;
+            padding-top: .7rem;
+            padding-bottom: .7rem;
+            font-size: 1.5rem;
+        }
+
+        .featuresContentsP {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tipsContents {
+            p {
+                margin: 0;
+            }
+        }
+
+        .tips,
+        .features {
+            width: 70%;
+        }
+    }
+}
+
+.toogle {
+    input[type=checkbox]#check {
+        opacity: 0;
+        position: absolute;
+        left: -99rem;
+        top: -99rem;
+    }
+
+    input[type=checkbox]#check+label {
+        display: flex;
+        cursor: pointer;
+    }
+
+    input[type=checkbox]#check+label::before {
+        content: " ";
+        width: 4rem;
+        height: 1.8rem;
+        background-color: $themeColourOne;
+        border-radius: 10px;
+        border: solid white 2px;
+    }
+
+    input[type=checkbox]#check+label::after {
+        position: absolute;
+        content: " ";
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: white;
+        border-radius: 10px;
+        margin: .3rem .3rem 0 .3rem;
+        transition: 200ms ease-in-out;
+    }
+
+    input[type=checkbox]#check:checked+label::before {
+        content: " ";
+        width: 4rem;
+        height: 1.8rem;
+        background-color: $themeColourOne;
+        border-radius: 10px;
+        border: solid white 2px;
+    }
+
+    input[type=checkbox]#check:checked+label::after {
+        transform: translateX(150%);
+        transition: 200ms ease-in-out;
+
+    }
 }
 
 
